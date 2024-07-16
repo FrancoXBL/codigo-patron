@@ -1,0 +1,58 @@
+/* HEADER COMPONENTS IMPORT CSS */
+@import url('../components/main-page-component/header-components/header-container-component/headerContainer.css');
+@import url('../components/main-page-component/header-components/header-logo-component/headerLogo.css');
+@import url('../components/main-page-component/header-components/header-redes-component/headerRedes.css');
+
+/* MAIN VIEW COMPONENTES CSS IMPORT */
+@import url('../components/main-page-component/main-view-components/main-view-container-component/mainViewContainer.css');
+@import url('../components/main-page-component/main-view-components/last-news-card-component/lastNewsCard.css');
+@import url('../components/main-page-component/main-view-components/normal-news-card-component/normalNewsCard.css');
+
+/* FOOTER COMPONENTS CSS IMPORT */
+@import url('../components/main-page-component/footer-components/footer-ads-component/footerAds.css');
+@import url('../components/main-page-component/footer-components/footer-container-component/footerContainer.css');
+
+/* ANUNCIO HORIZONTAL CSS */
+@import url('../components/main-page-component/ads-horizontal/adHorizontal.css');
+
+/* HISTORIAL PARTIDOS CSS */
+@import url('../components/partidos-patronato-page-component/container-historial-partidos/historialPartidos.css');
+@import url('../components/partidos-patronato-page-component/main-container-partidos-page/partidosView.css');
+
+/* NOTICIA UNICA */
+@import url('../components/unique-new-page-component/uniqueNewPage.css');
+
+/* FORMULARIOS */
+@import url('../components/admin/admin-forms/formStyles.css');
+
+body{
+    margin: 0;
+    background-color: var(--color-negro);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.app{
+    max-width: 1240px;
+    margin: auto;
+    background-color: #333333;
+    padding-inline: 1rem;
+    min-width: 540px;
+}
+
+@media (max-width: 1240px) {
+    .app{
+        max-width: 720px;
+        margin: auto;
+        background-color: #333333;
+    }
+}
+
+:root {
+    --color-rojo: #D50000;
+    --color-negro: #0c0c0c;
+    --color-gris-oscuro: #333333;
+    --color-gris-claro: #CCCCCC;
+    --color-blanco: #FFFFFF;
+    --color-rojo-oscuro: #8B0000;
+    --color-rojo-claro: #FF5252;
+}

@@ -1,0 +1,16 @@
+.header-logo{
+    height: 150px;
+}
+.header-logo:hover{
+    cursor: pointer;
+}
+
+@media (max-width: 1240px) {
+    .header-logo{
+        width: 50%;
+        height: 120px;
+    }
+}
+
+
+

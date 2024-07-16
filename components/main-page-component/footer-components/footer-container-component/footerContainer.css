@@ -1,0 +1,26 @@
+.footer-container{
+    border-radius: 1rem;
+    margin-top: 1rem;
+    height: auto;
+    width: full;
+    background-color: var(--color-blanco);
+}
+
+.ads-pc-container{
+    width: 100%;
+    height: full;
+}
+.ads-mobile-container{
+    display: none;
+}
+
+@media (max-width: 1240px) {
+    .ads-pc-container {
+      display: none;
+    }
+    .ads-mobile-container{
+        display: block;
+        width: 100%;
+        height: full;
+    }
+  }

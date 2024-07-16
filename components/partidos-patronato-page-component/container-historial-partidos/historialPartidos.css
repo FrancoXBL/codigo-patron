@@ -1,0 +1,114 @@
+.card {
+    width: 100%;
+    max-width: 600px;
+    background-color: white;
+    max-height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  .border-red{
+    border: 3px solid rgb(108, 6, 6);
+  }
+  .border-green{
+    border: 3px solid rgb(19, 201, 16);
+  }
+  .border-yellow{
+    border: 3px solid rgb(171, 161, 27);
+  }
+
+  .content-teams{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .content-teams > div {
+    margin: auto;
+    text-align: center;
+    width: 33%;
+  }
+  
+  .card-body {
+    background-color: white;
+    padding: 20px;
+  }
+  
+  .card-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .text-muted {
+    color: #888;
+    font-size: 0.9rem;
+    margin: 0px;
+  }
+  
+  .d-flex {
+    display: flex;
+  }
+  
+  .justify-content-between {
+    justify-content: space-between;
+  }
+  
+  .align-items-center {
+    align-items: center;
+  }
+  
+  .mb-3 {
+    margin-bottom: 15px;
+  }
+  
+  .team-logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+  .team-name {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  .score {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0 5px;
+  }
+  
+  .hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  ul li {
+    margin-bottom: 5px;
+  }
+
+  .publi-card{
+    margin-top: 1rem;
+    max-width: 600px;
+    height: auto;
+  }
+
+  .publi-card > img{
+    max-width: 560px;
+    width: 100%;
+  }
+
+  .goal-details{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 1rem;
+  }
+  .goal-details > div > p {
+    display: block;
+  }

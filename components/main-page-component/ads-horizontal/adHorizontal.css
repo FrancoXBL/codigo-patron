@@ -1,0 +1,47 @@
+
+  .ad-horizontal {
+    display: block;
+    width: 540px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: box-shadow 0.3s;
+    background-color: var(--color-gris-oscuro);
+    
+  }
+
+  .horizontal-ad-container{
+    background-color: var(--color-gris-oscuro);
+    width: auto;
+    padding: 0px;
+  }
+  
+  .ad-horizontal__image-container {
+    width: auto;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--color-gris-oscuro);
+  }
+
+  .ad-horizontal__image {
+    height: 200px;
+    display: block;
+    transition: opacity 0.3s;
+  }
+
+  @media (max-width: 1240px) {
+    .ad-horizontal {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      gap: .3rem;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: box-shadow 0.3s;
+      background-color: var(--color-gris-claro);
+    }
+    .ad-horizontal__image {
+      display: block;
+      width: 100%;
+      transition: opacity 0.3s;
+    }
+}

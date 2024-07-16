@@ -1,0 +1,71 @@
+.partidos-patronato-container {
+  display: flex;
+  justify-content: space-between;
+  max-height: 500px;
+  margin-top: 1rem;
+}
+
+.partidos-pasados-container {
+  margin-inline-start: .5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  overflow: auto;
+  width: 50%;
+}
+
+/* Para navegadores basados en WebKit como Chrome, Safari y Edge */
+.partidos-pasados-container::-webkit-scrollbar {
+  width: 2px; /* Ancho del scrollbar vertical */
+  height: 6px; /* Altura del scrollbar horizontal */
+}
+
+.partidos-pasados-container::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color de fondo de la pista del scrollbar */
+  border-radius: 10px;
+}
+
+.partidos-pasados-container::-webkit-scrollbar-thumb {
+  background: #888; /* Color de la manija del scrollbar */
+  border-radius: 10px;
+}
+
+.partidos-pasados-container::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color de la manija del scrollbar al hacer hover */
+}
+
+.partido-proximo-container {
+  background-color: white;
+  width: 50%;
+  height: full;
+}
+
+@media (max-width: 1240px) {
+  .partidos-patronato-container {
+    width: 100%;
+    display: block;
+    max-height: 500px;
+    margin-top: 1rem;
+    overflow: auto;
+  }
+  .partidos-pasados-container {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    overflow: auto;
+    min-width: 500px;
+    max-height: 500px;
+    margin-inline: auto;
+  }
+  .partido-proximo-container {
+    min-width: 500px;
+    background-color: white;
+    height: full;
+    background-color: var(--gris-oscuro);
+    margin-inline: auto;
+  }
+
+}
+
+

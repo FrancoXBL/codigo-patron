@@ -1,0 +1,42 @@
+.unique-new-page{
+    width: 100%;
+    background-color: var(--color-blanco);
+    position: relative;
+
+}
+
+.unique-new-page-title{
+    font-size: 3rem;
+    padding-top: 5rem;
+    margin-left: 2.5rem;
+}
+
+.text-hidden-new-page{
+    color: white;
+    background-color: var(--color-rojo);
+    border-radius: 1em;
+    padding: .5rem;
+    position: absolute;
+    left: 2.5rem;
+    top: 1rem;
+}
+
+.img-unique-new-container{
+    width: calc(100% - 5rem);
+    margin: auto;
+}
+.img-unique-new{
+    width: 100%;
+}
+
+.markdown-style{
+    max-width: 1240px;
+    height: auto;
+    padding: 2.5rem;
+}
+.markdown-style > p >img {
+    max-width: 50%;
+}
+.markdown-style > p {
+    font-size: large;
+}

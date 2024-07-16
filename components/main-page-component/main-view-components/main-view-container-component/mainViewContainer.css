@@ -1,0 +1,70 @@
+.main-view-container {
+  display: flex;
+  width: full;
+  background-color: var(--color-negro);
+  margin-top: .5rem;
+}
+
+.last-news-card-container {
+  margin: .5rem;
+  background-color: var(--color-negro);
+}
+
+.sm-news-card-container {
+  margin-top: .5rem;
+  margin-right: .5rem;
+  max-height: 500px;
+  display: grid;
+  gap: .5rem;
+  background-color: var(--color-negro);
+  overflow: scroll;
+  scrollbar-width: none; /* Firefox: grosor del scrollbar */
+  scrollbar-color: #888 #f1f1f1; /* Firefox: color de la manija y la pista del scrollbar */
+}
+
+/* Para navegadores basados en WebKit como Chrome, Safari y Edge */
+.sm-news-card-container::-webkit-scrollbar {
+  width: 6px; /* Ancho del scrollbar vertical */
+  height: 6px; /* Altura del scrollbar horizontal */
+}
+
+.sm-news-card-container::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color de fondo de la pista del scrollbar */
+  border-radius: 10px;
+}
+
+.sm-news-card-container::-webkit-scrollbar-thumb {
+  background: #888; /* Color de la manija del scrollbar */
+  border-radius: 10px;
+}
+
+.sm-news-card-container::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color de la manija del scrollbar al hacer hover */
+}
+
+.horizontal-ad-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: .5rem;
+  background-color: black;
+  padding: .5rem;
+}
+
+
+@media (max-width: 1240px) {
+  .horizontal-ad-container{
+    width: 100%;
+    display: block;
+    margin-top: .5rem;
+    padding: .5rem;
+  }
+}
+@media (max-width: 720px) {
+  .horizontal-ad-container{
+    width: 100%;
+    display: block;
+    margin-top: .5rem;
+    padding: .5rem;
+  }
+}
