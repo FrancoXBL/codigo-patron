@@ -1,7 +1,7 @@
 .header-container {
     width: 100%;
-    height: 130px;
-    background: linear-gradient(180deg, rgb(198, 116, 116), rgb(255, 255, 255));
+    height: 200px;
+    background: linear-gradient(180deg, var(--color-blanco), var(--color-gris-oscuro));
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -11,7 +11,7 @@
     .header-container {
         width: 100%;
         height: auto;
-        background: linear-gradient(180deg, rgb(198, 116, 116), rgb(255, 255, 255));
+        background: linear-gradient(180deg, var(--color-gris-oscuro), rgb(255, 255, 255));
         display: block;
         overflow: auto;
     }

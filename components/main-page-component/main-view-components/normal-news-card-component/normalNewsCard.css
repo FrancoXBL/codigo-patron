@@ -2,11 +2,16 @@
     overflow: hidden;
     transition: box-shadow 0.3s;
     /* border-radius: 5px; */
-    height: auto;
-    width: 100%;
+    height: 100%;
+    max-width: 300px;
     position: relative;
   }
   
+  .title-another-news{
+    color: white;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+  }
   
   .normal-news-card__image {
     width: 100%;
@@ -23,14 +28,14 @@
   
   .normal-news-card__title {
     margin: 0;
-    font-size: 1.1em;
+    font-size: 1em;
     color: white;
-    background-color: red;
-    padding: 10px;
+    background: linear-gradient(180deg, rgb(255, 255, 255, 0.05), rgb(143, 5, 5, .8));
+    padding: 5px;
     color: white;
     /* border-radius: 4px; */
     transition: background-color 0.3s, font-size 0.3s;
-    text-decoration: none;
+    text-decoration: underline;
     position: absolute;
     width: 100%;
     bottom: 0px;

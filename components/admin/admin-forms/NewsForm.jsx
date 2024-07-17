@@ -107,8 +107,7 @@ Texto en bloque de Markdown
 [Referencia interna][1]
 
 [1]: http://ejemplo.com`,
-    date: "2024-11-21",
-    _id: "a4",
+    date: "2024-11-21"
   });
 
   const navigate = useNavigate()

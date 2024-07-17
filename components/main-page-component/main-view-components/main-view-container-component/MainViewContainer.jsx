@@ -6,9 +6,10 @@ import NormalNewsCard from "../normal-news-card-component/NormalNewsCard.jsx";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { API_KEY } from "../../../../const/API_KEY.js";
+import { LuArrowLeftSquare, LuArrowRightSquare } from "react-icons/lu";
 
 export default function MainViewContainer() {
-
+  const [newNumber, setNewNumber] = useState(1)
   const [news, setNews] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -32,17 +33,25 @@ export default function MainViewContainer() {
   if (error) return <p>Error: {error}</p>;
   return (
     <>
+    <div className="title-arrows">
+    <h1 className="">Ultimas Noticias</h1>
+    <div className="arrows-box">
+      <LuArrowLeftSquare className="arrow" onClick={() => setNewNumber(newNumber != 1 ? newNumber - 1 : newNumber)}/>
+      <LuArrowRightSquare className="arrow" onClick={() => setNewNumber(news.length != newNumber ? newNumber + 1 : newNumber)} />
+    </div>
+    </div>
     <div className="main-view-container">
       <div className="last-news-card-container">
         <LastNewsCard
-          type={news[news.length - 1].type}
-          title={news[news.length - 1].title}
-          img={news[news.length - 1].img}
-          body={news[news.length - 1].body}
-          date={news[news.length - 1].date}
-          id={news[news.length - 1]._id}
+          type={news[news.length - newNumber].type}
+          title={news[news.length - newNumber].title}
+          img={news[news.length - newNumber].img}
+          body={news[news.length - newNumber].body}
+          date={news[news.length - newNumber].date}
+          id={news[news.length - newNumber]._id}
         />
       </div>
+      <h2 className="title-another-news">Puede interesarte</h2>
       <div className="sm-news-card-container">
         {news.slice().reverse().map((news, index) => (
           <div className="normal-news-card-container" key={index}>
