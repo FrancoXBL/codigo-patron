@@ -1,8 +1,5 @@
-import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
-import { IoIosHome } from "react-icons/io";
-import { RiCalendarScheduleLine } from "react-icons/ri";
-import { Link } from "react-router-dom";
+
+import { RiFacebookBoxLine, RiTwitterXLine, RiYoutubeLine, RiInstagramLine } from "react-icons/ri";
 export default function HeaderRedes(){
 
     const openLink = (url) => {
@@ -12,23 +9,17 @@ export default function HeaderRedes(){
     return (
         <div className="redes-box-container">
             <div className="box-container">
-                <FaFacebook className="icon-redes" onClick={() => openLink('https://www.facebook.com/profile.php?id=100085134386557')}/>
+                <RiFacebookBoxLine className="icon-redes" onClick={() => openLink('https://www.facebook.com/profile.php?id=100085134386557')}/>
             </div>
             <div className="box-container">
-                <FaInstagram className="icon-redes" onClick={() => openLink('https://www.instagram.com/codigopatron/')} />
+                <RiInstagramLine className="icon-redes" onClick={() => openLink('https://www.instagram.com/codigopatron/')} />
             </div>
             <div className="box-container">
-                <FaYoutube className="icon-redes" onClick={() => openLink('https://www.youtube.com/@codigopatron2336')} />
+                <RiYoutubeLine className="icon-redes" onClick={() => openLink('https://www.youtube.com/@codigopatron2336')} />
             </div>
             <div className="box-container">
-                <FaXTwitter className="icon-redes" onClick={() => openLink('https://x.com/CodigoPatron_')}/>
+                <RiTwitterXLine className="icon-redes" onClick={() => openLink('https://x.com/CodigoPatron_')}/>
             </div>
-            <Link to={'/'} className="box-container color-red">
-                <IoIosHome className="icon-redes"/>
-            </Link>
-            <Link to={'/partidos-patronato'} className="box-container color-red">
-                <RiCalendarScheduleLine className="icon-redes"/>
-            </Link>
         </div>
     )
 }

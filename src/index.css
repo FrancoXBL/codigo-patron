@@ -25,6 +25,9 @@
 /* FORMULARIOS */
 @import url('../components/admin/admin-forms/formStyles.css');
 
+/* TODAS LAS NOTICIAS CONTAINER Y CARDS */
+@import url('../components/all-news-component/allNewsCard.css');
+
 body{
     margin: 0;
     background-color: #333;

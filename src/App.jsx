@@ -11,6 +11,7 @@ import MatchForm from "../components/admin/admin-forms/MatchForm";
 import ArticleForm from "../components/admin/admin-forms/NewsForm";
 import NextMatchForm from "../components/admin/admin-forms/NextMatchForm";
 import Login from "../components/admin/admin-forms/LoginForm";
+import AllNewsContainer from "../components/all-news-component/all-news-container";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/admin/news-form" element={<ArticleForm />}></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/admin/next-match-form" element={<NextMatchForm />}></Route>
+          <Route path="/all-news" element={<AllNewsContainer />}></Route>
           <Route path="*" element={<NotFoundPage />}></Route>
         </Routes>
         <FooterContainer />

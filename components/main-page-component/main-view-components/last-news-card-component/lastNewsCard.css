@@ -3,10 +3,12 @@
   overflow: hidden;
   transition: box-shadow 0.3s;
   border-radius: 10px;
+  width: 75%;
+  height: 500px;
 }
 
 .title-arrows{
-  width: 100%;
+  width: 75%;
   display: flex;
   justify-content: space-between;
   margin-top: 2rem;
