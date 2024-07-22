@@ -29,3 +29,19 @@
 a {
     text-decoration: none;
 }
+
+@media (max-width: 1240px) {
+    .all-news-card{
+        display: flex;
+        background: linear-gradient(90deg, var(--color-rojo-oscuro), var(--color-negro));
+        color: white;
+        border-radius: 10px;
+        overflow: hidden;
+        padding: .3rem;
+        gap: 1rem;
+    }
+    .all-news-card * p {
+        display: none;
+    }
+
+  }

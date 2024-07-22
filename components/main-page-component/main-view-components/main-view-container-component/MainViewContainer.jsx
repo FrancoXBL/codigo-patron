@@ -94,18 +94,26 @@ export default function MainViewContainer() {
             ))}
         </div>
       </div>
+      <div className="link-news-container-small">
+        <div className="box-links-container">
+          <h2>Todas las noticias</h2>
+          <Link to={"/all-news"} className="box-container-news">
+            <BiNews className="icon-redes" />
+          </Link>
+        </div>
+        <div className="box-links-container">
+          <h2>Historial de partidos</h2>
+          <Link to={"/partidos-patronato"} className="box-container-news">
+            <RiCalendarScheduleLine className="icon-redes" />
+          </Link>
+        </div>
+      </div>
       <div className="horizontal-ad-container">
         <AdHorizontal
           img={horizontalAd[0].img}
           body={horizontalAd[0].body}
           title={horizontalAd[0].title}
           url={horizontalAd[0].url}
-        />
-        <AdHorizontal
-          img={horizontalAd[1].img}
-          body={horizontalAd[1].body}
-          title={horizontalAd[1].title}
-          url={horizontalAd[1].url}
         />
       </div>
     </>

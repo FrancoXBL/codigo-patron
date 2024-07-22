@@ -47,7 +47,6 @@ const ProximoPartido = () => {
         </div>
         <hr />
       <div className="publi-card">
-      <img src={horizontalAd[0].img} alt="" />
       </div>
       </div>
     </div>

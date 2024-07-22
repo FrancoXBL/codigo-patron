@@ -44,7 +44,7 @@ body{
 
 @media (max-width: 1240px) {
     .app{
-        max-width: 600px;
+        max-width: 500px;
         margin: auto;
         background-color: #333;
     }
