@@ -17,6 +17,8 @@ function App() {
   return (
     <>
       <div className="app">
+        <div className="background-header">
+        </div>
         <HeaderContainer />
         <Routes>
           <Route path="/" element={<MainViewContainer />}></Route>

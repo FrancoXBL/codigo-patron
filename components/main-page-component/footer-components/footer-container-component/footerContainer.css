@@ -1,5 +1,5 @@
 .footer-container{
-    border-radius: 1rem;
+    border-radius: .5rem;
     margin-top: 1rem;
     height: auto;
     width: full;
@@ -9,6 +9,7 @@
 .ads-pc-container{
     width: 100%;
     height: full;
+    background-color: var(--color-rojo-oscuro);
 }
 .ads-mobile-container{
     display: none;

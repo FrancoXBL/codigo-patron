@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 const MatchForm = () => {
   const [logged, setLogged] = useState(false)
   const [match, setMatch] = useState({
-    homeTeam: "Local",
+    homeTeam: "Patronato",
     awayTeam: "Vicitante",
     homeScore: 0,
     awayScore: 0,
@@ -16,11 +16,11 @@ const MatchForm = () => {
     venue: "Estadio Presbítero Bartolomé Grella",
     city: "Paraná",
     country: "Argentina",
-    league: "Primera B Nacional",
+    league: "B Nacional",
     season: "2024",
     homeGoalDetails: [],
     awayGoalDetails: [],
-    referee: "Fernando Espinoza",
+    referee: "Referee",
   });
 
   const navigate = useNavigate()
@@ -79,7 +79,7 @@ const MatchForm = () => {
   {logged ? <div className="form-container">
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label>Home Team:</label>
+          <label>Patronato:</label>
           <input
             type="text"
             name="homeTeam"
@@ -88,7 +88,7 @@ const MatchForm = () => {
           />
         </div>
         <div className="form-group">
-          <label>Away Team:</label>
+          <label>Contra:</label>
           <input
             type="text"
             name="awayTeam"
@@ -97,7 +97,7 @@ const MatchForm = () => {
           />
         </div>
         <div className="form-group">
-          <label>Home Score:</label>
+          <label>Goles de Patronato:</label>
           <input
             type="number"
             name="homeScore"
@@ -109,21 +109,21 @@ const MatchForm = () => {
           <h3>Home Team Goals</h3>
           {match.homeGoalDetails?.map((goal, index) => (
             <div key={index} className="goal-details">
-              <label>Player:</label>
+              <label>Jugador:</label>
               <input
                 type="text"
                 name="player"
                 value={goal.player}
                 onChange={(e) => handleGoalDetailChange(e, index, "home")}
               />
-              <label>Minute:</label>
+              <label>Minuto:</label>
               <input
                 type="number"
                 name="minute"
                 value={goal.minute}
                 onChange={(e) => handleGoalDetailChange(e, index, "home")}
               />
-              <label>Type:</label>
+              <label>Tipo de gol:</label>
               <input
                 type="text"
                 name="type"
@@ -134,7 +134,7 @@ const MatchForm = () => {
           ))}
         </div>
         <div className="form-group">
-          <label>Away Score:</label>
+          <label>Equipo Rival:</label>
           <input
             type="number"
             name="awayScore"
@@ -146,21 +146,21 @@ const MatchForm = () => {
           <h3>Away Team Goals</h3>
           {match.awayGoalDetails?.map((goal, index) => (
             <div key={index} className="goal-details">
-              <label>Player:</label>
+              <label>Jugador:</label>
               <input
                 type="text"
                 name="player"
                 value={goal.player}
                 onChange={(e) => handleGoalDetailChange(e, index, "away")}
               />
-              <label>Minute:</label>
+              <label>Minuto:</label>
               <input
                 type="number"
                 name="minute"
                 value={goal.minute}
                 onChange={(e) => handleGoalDetailChange(e, index, "away")}
               />
-              <label>Type:</label>
+              <label>Tipo de gol:</label>
               <input
                 type="text"
                 name="type"
@@ -171,7 +171,7 @@ const MatchForm = () => {
           ))}
         </div>
         <div className="form-group">
-          <label>Hour:</label>
+          <label>Hora del partido:</label>
           <input
             type="time"
             name="hour"
@@ -180,7 +180,7 @@ const MatchForm = () => {
           />
         </div>
         <div className="form-group">
-          <label>Date:</label>
+          <label>Fecha del partido:</label>
           <input
             type="date"
             name="date"
@@ -189,7 +189,7 @@ const MatchForm = () => {
           />
         </div>
         <div className="form-group">
-          <label>Venue:</label>
+          <label>Estadio:</label>
           <input
             type="text"
             name="venue"
@@ -198,7 +198,7 @@ const MatchForm = () => {
           />
         </div>
         <div className="form-group">
-          <label>City:</label>
+          <label>Ciudad:</label>
           <input
             type="text"
             name="city"
@@ -207,7 +207,7 @@ const MatchForm = () => {
           />
         </div>
         <div className="form-group">
-          <label>Country:</label>
+          <label>Pais:</label>
           <input
             type="text"
             name="country"
@@ -216,7 +216,7 @@ const MatchForm = () => {
           />
         </div>
         <div className="form-group">
-          <label>League:</label>
+          <label>Torneo:</label>
           <input
             type="text"
             name="league"
@@ -225,7 +225,7 @@ const MatchForm = () => {
           />
         </div>
         <div className="form-group">
-          <label>Season:</label>
+          <label>Temporada:</label>
           <input
             type="text"
             name="season"
@@ -250,29 +250,29 @@ const MatchForm = () => {
       </form>
 
       <div className="preview">
-        <h2>Preview</h2>
+        <h2>Viste Previa</h2>
         <p>
-          <strong>Match:</strong> {match.homeTeam} vs {match.awayTeam}
+          <strong>Partido:</strong> {match.homeTeam} vs {match.awayTeam}
         </p>
         <p>
-          <strong>Score:</strong> {match.homeScore} - {match.awayScore}
+          <strong>Resultado:</strong> {match.homeScore} - {match.awayScore}
         </p>
         <p>
-          <strong>Time:</strong> {match.hour} on {match.date}
+          <strong>Hora:</strong> {match.hour} on {match.date}
         </p>
         <p>
-          <strong>Venue:</strong> {match.venue}, {match.city}, {match.country}
+          <strong>Estadio:</strong> {match.venue}, {match.city}, {match.country}
         </p>
         <p>
-          <strong>League:</strong> {match.league}
+          <strong>Torneo:</strong> {match.league}
         </p>
         <p>
-          <strong>Season:</strong> {match.season}
+          <strong>Temporada:</strong> {match.season}
         </p>
         <p>
           <strong>Referee:</strong> {match.referee}
         </p>
-        <h3>Home Team Goals</h3>
+        <h3>Goles de patronato</h3>
         <ul>
           {match.homeGoalDetails.map((goal, index) => (
             <li key={index}>
@@ -280,7 +280,7 @@ const MatchForm = () => {
             </li>
           ))}
         </ul>
-        <h3>Away Team Goals</h3>
+        <h3>Goles del rival</h3>
         <ul>
           {match.awayGoalDetails.map((goal, index) => (
             <li key={index}>

@@ -10,8 +10,8 @@ const ArticleForm = () => {
   const [article, setArticle] = useState({
     title: "Patronato busca la victoria",
     type: "Primera",
-    img: "https://media.lacapital.com.ar/p/bfa85750a005d7a2bdb1995db5fa4f27/adjuntos/205/imagenes/101/664/0101664466/san-martin-patronato-3jpg.jpg",
-    body: `# Encabezados
+    img: "https://w0.peakpx.com/wallpaper/696/957/HD-wallpaper-club-atletico-patronato-argentinian-football-club-emblem-patronato-logo-first-division-superliga-argentina-argentina-football-championships-football-parana-argentina-silk-texture.jpg",
+    body: `# Recorda que para subir imagenes es '![descripcion](link del video)'
 
 # Encabezado de nivel 1
 ## Encabezado de nivel 2
@@ -54,17 +54,9 @@ const ArticleForm = () => {
 
 # Enlaces
 
-[Enlace simple](http://ejemplo.com)
+[Como subir imagenes](https://www.youtube.com/watch?v=9327Q-9j3x0)
 
-[Enlace con título](http://ejemplo.com "Título del enlace")
-
----
-
-# Imágenes
-
-![Texto alternativo](http://ejemplo.com/imagen.jpg)
-
-![Texto alternativo con título](http://ejemplo.com/imagen.jpg "Título de la imagen")
+[Pagina para subir imagenes](https://postimages.org/)
 
 ---
 
@@ -105,8 +97,7 @@ Texto en bloque de Markdown
 @usuario para mencionar a alguien (soporte en plataformas específicas)
 
 [Referencia interna][1]
-
-[1]: http://ejemplo.com`,
+`,
     date: "2024-11-21"
   });
 
@@ -133,23 +124,23 @@ Texto en bloque de Markdown
   {logged ? <div className="form-container">
     <form onSubmit={handleSubmit}>
       <div className="form-group">
-        <label>Title:</label>
+        <label>Titulo de la noticia:</label>
         <input type="text" name="title" value={article.title} onChange={handleChange} />
       </div>
       <div className="form-group">
-        <label>Type:</label>
+        <label>Tipo de noticia o a que ambito pertenece:</label>
         <input type="text" name="type" value={article.type} onChange={handleChange} />
       </div>
       <div className="form-group">
-        <label>Image URL:</label>
+        <label>URL de la imagen:</label>
         <input type="text" name="img" value={article.img} onChange={handleChange} />
       </div>
       <div className="form-group">
-        <label>Body:</label>
+        <label>Cuerpo de la noticia:</label>
         <textarea name="body" value={article.body} onChange={handleChange} rows="10" />
       </div>
       <div className="form-group">
-        <label>Date:</label>
+        <label>Fecha:</label>
         <input type="date" name="date" value={article.date} onChange={handleChange} />
       </div>
       <button type="submit" className="submit-button">Submit</button>

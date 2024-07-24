@@ -7,15 +7,15 @@ import { useNavigate } from "react-router-dom";
 const NextMatchForm = () => {
   const [logged, setLogged] = useState(false);
   const [match, setMatch] = useState({
-    homeTeam: "FC Barcelona",
-    awayTeam: "Real Madrid",
-    hour: "20:45",
+    homeTeam: "Patronato",
+    awayTeam: "Rival",
+    hour: "00:00",
     date: "2024-07-15",
-    venue: "Camp Nou",
-    city: "Barcelona",
-    country: "Spain",
-    league: "La Liga",
-    season: "2023/2024",
+    venue: "Bartolome Grella",
+    city: "Paraná",
+    country: "Argentina",
+    league: "B Nacional",
+    season: "2024",
   });
   const navigate = useNavigate()
 
@@ -43,7 +43,7 @@ return (
       <div className="form-container">
         <form onSubmit={handleSubmit}>
           <div className="form-group">
-            <label>Home Team:</label>
+            <label>Patronato:</label>
             <input
               type="text"
               name="homeTeam"
@@ -52,7 +52,7 @@ return (
               />
           </div>
           <div className="form-group">
-            <label>Away Team:</label>
+            <label>Equipo rival:</label>
             <input
               type="text"
               name="awayTeam"
@@ -62,7 +62,7 @@ return (
           </div>
 
           <div className="form-group">
-            <label>Hour:</label>
+            <label>Hora del partido:</label>
             <input
               type="time"
               name="hour"
@@ -71,7 +71,7 @@ return (
               />
           </div>
           <div className="form-group">
-            <label>Date:</label>
+            <label>Fecha:</label>
             <input
               type="date"
               name="date"
@@ -80,7 +80,7 @@ return (
             />
           </div>
           <div className="form-group">
-            <label>Venue:</label>
+            <label>Estadio:</label>
             <input
               type="text"
               name="venue"
@@ -89,7 +89,7 @@ return (
               />
           </div>
           <div className="form-group">
-            <label>City:</label>
+            <label>Ciudad:</label>
             <input
               type="text"
               name="city"
@@ -98,7 +98,7 @@ return (
               />
           </div>
           <div className="form-group">
-            <label>Country:</label>
+            <label>Pais:</label>
             <input
               type="text"
               name="country"
@@ -107,7 +107,7 @@ return (
             />
           </div>
           <div className="form-group">
-            <label>League:</label>
+            <label>Torneo:</label>
             <input
               type="text"
               name="league"
@@ -116,7 +116,7 @@ return (
             />
           </div>
           <div className="form-group">
-            <label>Season:</label>
+            <label>Temporada:</label>
             <input
               type="text"
               name="season"
@@ -131,21 +131,21 @@ return (
         </form>
 
         <div className="preview">
-          <h2>Preview</h2>
+          <h2>Vista previa</h2>
           <p>
-            <strong>Match:</strong> {match.homeTeam} vs {match.awayTeam}
+            <strong>Partido:</strong> {match.homeTeam} vs {match.awayTeam}
           </p>
           <p>
-            <strong>Time:</strong> {match.hour} on {match.date}
+            <strong>Hora:</strong> {match.hour} on {match.date}
           </p>
           <p>
-            <strong>Venue:</strong> {match.venue}, {match.city}, {match.country}
+            <strong>Estadio:</strong> {match.venue}, {match.city}, {match.country}
           </p>
           <p>
-            <strong>League:</strong> {match.league}
+            <strong>Torneo:</strong> {match.league}
           </p>
           <p>
-            <strong>Season:</strong> {match.season}
+            <strong>Temporada:</strong> {match.season}
           </p>
         </div>
       </div>

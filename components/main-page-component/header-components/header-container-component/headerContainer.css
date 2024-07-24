@@ -1,10 +1,20 @@
 .header-container {
-    width: 100%;
+    width: 1240px;
     height: 200px;
     background: linear-gradient(180deg, var(--color-blanco), var(--color-gris-oscuro));
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.background-header{
+    z-index: -1;
+    height: 200px;
+    width: 100vw;
+    margin: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, var(--color-blanco), var(--color-gris-oscuro));
 }
 
 @media (max-width: 1240px) {

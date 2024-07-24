@@ -88,7 +88,9 @@
   display: none;
 }
 
-
+.normal-news-card-container{
+  min-width: 300px;
+}
 
 @media (max-width: 1240px) {
   .horizontal-ad-container{
@@ -123,7 +125,6 @@
     overflow: hidden;
     transition: box-shadow 0.3s;
     /* border-radius: 5px; */
-    width: 600px;
     position: relative;
   }
 }
