@@ -6,7 +6,8 @@ import { API_KEY } from "../../../const/API_KEY";
 import { useNavigate } from "react-router-dom";
 
 const ArticleForm = () => {
-  const [logged, setLogged] = useState(false)
+  const [showPreview, setShowPreview] = useState(false);
+  const [logged, setLogged] = useState(false);
   const [article, setArticle] = useState({
     title: "Patronato busca la victoria",
     type: "Primera",
@@ -98,10 +99,10 @@ Texto en bloque de Markdown
 
 [Referencia interna][1]
 `,
-    date: "2024-11-21"
+    date: "2024-11-21",
   });
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const handleChange = (e) => {
     const { name, value } = e.target;
     setArticle({
@@ -114,48 +115,102 @@ Texto en bloque de Markdown
     e.preventDefault();
     try {
       await axios.post(`${API_KEY}/api/news`, article);
-      navigate('/')
+      navigate("/");
     } catch (error) {
       console.log(error);
     }
   };
 
-  return (<>
-  {logged ? <div className="form-container">
-    <form onSubmit={handleSubmit}>
-      <div className="form-group">
-        <label>Titulo de la noticia:</label>
-        <input type="text" name="title" value={article.title} onChange={handleChange} />
-      </div>
-      <div className="form-group">
-        <label>Tipo de noticia o a que ambito pertenece:</label>
-        <input type="text" name="type" value={article.type} onChange={handleChange} />
-      </div>
-      <div className="form-group">
-        <label>URL de la imagen:</label>
-        <input type="text" name="img" value={article.img} onChange={handleChange} />
-      </div>
-      <div className="form-group">
-        <label>Cuerpo de la noticia:</label>
-        <textarea name="body" value={article.body} onChange={handleChange} rows="10" />
-      </div>
-      <div className="form-group">
-        <label>Fecha:</label>
-        <input type="date" name="date" value={article.date} onChange={handleChange} />
-      </div>
-      <button type="submit" className="submit-button">Submit</button>
-    </form>
+  return (
+    <>
+      {logged ? (
+        <>
+        <div className='form-container'>
+          <form onSubmit={handleSubmit}>
+            <div className="form-group">
+              <label>Titulo de la noticia:</label>
+              <input
+                type="text"
+                name="title"
+                value={article.title}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="form-group">
+              <label>Tipo de noticia o a que ambito pertenece:</label>
+              <input
+                type="text"
+                name="type"
+                value={article.type}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="form-group">
+              <label>URL de la imagen:</label>
+              <input
+                type="text"
+                name="img"
+                value={article.img}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="form-group">
+              <label>Cuerpo de la noticia:</label>
+              <textarea
+                name="body"
+                value={article.body}
+                onChange={handleChange}
+                rows="10"
+              />
+            </div>
+            <div className="form-group">
+              <label>Fecha:</label>
+              <input
+                type="date"
+                name="date"
+                value={article.date}
+                onChange={handleChange}
+              />
+            </div>
+            <button type="submit" className="submit-button">
+              Todo bien! Subir.
+            </button>
+          </form>
 
-    <div className="preview">
-      <h2>Preview</h2>
-      <h1>{article.title}</h1>
-      <p><strong>Type:</strong> {article.type}</p>
-      <img src={article.img} alt={article.title} style={{ width: '100%', height: 'auto' }} />
-      <ReactMarkdown>{article.body}</ReactMarkdown>
-      <p><strong>Date:</strong> {article.date}</p>
-    </div>
-  </div> : <><Login setLogged={setLogged} /></>}
-  </>
+        </div>
+          {/* <div className={showPreview ? "preview" : "preview-hide"}>
+            <h2>Preview</h2>
+            <h1>{article.title}</h1>
+            <p>
+              <strong>Tipo de noticia:</strong> {article.type}
+            </p>
+            <img
+              src={article.img}
+              alt={article.title}
+              style={{ width: "100%", height: "auto" }}
+            />
+            <ReactMarkdown>{article.body}</ReactMarkdown>
+            <p>
+              <strong>Fecha:</strong> {article.date}
+            </p>
+            <button
+              type="button"
+              className="close-button"
+              onClick={() => setShowPreview(false)}
+            >
+              Cerrar y seguir editando
+            </button>
+            <button type="submit" className="submit-button">
+              Todo bien! Subir.
+            </button>
+          </div> */}
+        </>
+      ) : (
+        <>
+          <Login setLogged={setLogged} />
+        </>
+      )}
+    </>
   );
 };
 

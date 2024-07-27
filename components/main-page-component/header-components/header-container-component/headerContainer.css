@@ -18,10 +18,20 @@
 }
 
 @media (max-width: 1240px) {
+    .background-header{
+        z-index: -1;
+        height: 219px;
+        width: 100vw;
+        margin: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: linear-gradient(180deg, var(--color-blanco), var(--color-gris-oscuro));
+    }
     .header-container {
         width: 100%;
         height: auto;
-        background: linear-gradient(180deg, var(--color-gris-oscuro), rgb(255, 255, 255));
+        background-color: none;
         display: block;
         overflow: auto;
     }
