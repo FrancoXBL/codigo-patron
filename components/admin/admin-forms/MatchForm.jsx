@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Login from "./LoginForm";
+import MatchPreview from "../../previews/MatchPreview";
 import { API_KEY } from "../../../const/API_KEY";
 import { useNavigate } from "react-router-dom";
 
@@ -23,6 +24,11 @@ const MatchForm = () => {
     awayGoalDetails: [],
     referee: "Referee",
   });
+
+
+function mostrarVistaPrevia(sendMatch, setShowPreview){
+  return (<><MatchPreview match={sendMatch} close={setShowPreview}/></>)
+}
 
   const navigate = useNavigate();
   const handleChange = (e) => {
@@ -80,7 +86,7 @@ const MatchForm = () => {
     <>
       {logged ? (
         <>
-          <div className="form-container">
+          <div className={showPreview ? 'preview-hide' : "form-container"}>
             <form onSubmit={handleSubmit}>
               <div className="form-group">
                 <label>Patronato:</label>
@@ -246,63 +252,14 @@ const MatchForm = () => {
                   onChange={handleChange}
                 />
               </div>
+              <button type="button" className="close-button" onClick={() => setShowPreview(true)}>Ver Preview</button>
 
               <button type="submit" className="submit-button">
               Todo bien! Subir.
             </button>
             </form>
           </div>
-          {/* <div className={showPreview ? "preview" : "preview-hide"}>
-            <h2>Viste Previa</h2>
-            <p>
-              <strong>Partido:</strong> {match.homeTeam} vs {match.awayTeam}
-            </p>
-            <p>
-              <strong>Resultado:</strong> {match.homeScore} - {match.awayScore}
-            </p>
-            <p>
-              <strong>Hora:</strong> {match.hour} on {match.date}
-            </p>
-            <p>
-              <strong>Estadio:</strong> {match.venue}, {match.city},{" "}
-              {match.country}
-            </p>
-            <p>
-              <strong>Torneo:</strong> {match.league}
-            </p>
-            <p>
-              <strong>Temporada:</strong> {match.season}
-            </p>
-            <p>
-              <strong>Referee:</strong> {match.referee}
-            </p>
-            <h3>Goles de patronato</h3>
-            <ul>
-              {match.homeGoalDetails.map((goal, index) => (
-                <li key={index}>
-                  {goal.player} ({goal.minute}', {goal.type})
-                </li>
-              ))}
-            </ul>
-            <h3>Goles del rival</h3>
-            <ul>
-              {match.awayGoalDetails.map((goal, index) => (
-                <li key={index}>
-                  {goal.player} ({goal.minute}', {goal.type})
-                </li>
-              ))}
-            </ul>
-            <button
-              type="button"
-              className="close-button"
-              onClick={() => setShowPreview(false)}
-            >
-              Cerrar y seguir editando
-            </button>
-            <button type="submit" className="submit-button">
-              Todo bien! Subir.
-            </button>
-          </div> */}
+          {!showPreview ? '' : mostrarVistaPrevia(match, setShowPreview)}
         </>
       ) : (
         <>
