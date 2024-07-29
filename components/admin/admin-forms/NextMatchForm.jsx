@@ -3,6 +3,7 @@ import axios from "axios";
 import Login from "./LoginForm";
 import { API_KEY } from "../../../const/API_KEY";
 import { useNavigate } from "react-router-dom";
+import NextMatchPreview from "../../previews/NextMatchPreview";
 
 const NextMatchForm = () => {
   const [showPreview, setShowPreview] = useState(false);
@@ -27,6 +28,10 @@ const NextMatchForm = () => {
       [name]: value,
     });
   };
+  
+  function mostrarVistaPrevia(sendNextMatch, setShowPreview){
+    return (<><NextMatchPreview nextMatch={sendNextMatch} close={setShowPreview}/></>)
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -42,7 +47,7 @@ const NextMatchForm = () => {
     <>
       {logged ? (
         <>
-          <div className="form-container">
+          <div className={showPreview ? 'preview-hide' : "form-container"}>
             <form onSubmit={handleSubmit}>
               <div className="form-group">
                 <label>Patronato:</label>
@@ -126,41 +131,14 @@ const NextMatchForm = () => {
                   onChange={handleChange}
                 />
               </div>
-
+              <button type="button" className="close-button" onClick={() => {setShowPreview(true)}}>Ver Vista Previa</button>
               <button type="submit" className="submit-button">
               Todo bien! Subir.
             </button>
             </form>
           </div>
-          {/* <div className={showPreview ? "preview" : "preview-hide"}>
-            <h2>Vista previa</h2>
-            <p>
-              <strong>Partido:</strong> {match.homeTeam} vs {match.awayTeam}
-            </p>
-            <p>
-              <strong>Hora:</strong> {match.hour} on {match.date}
-            </p>
-            <p>
-              <strong>Estadio:</strong> {match.venue}, {match.city},{" "}
-              {match.country}
-            </p>
-            <p>
-              <strong>Torneo:</strong> {match.league}
-            </p>
-            <p>
-              <strong>Temporada:</strong> {match.season}
-            </p>
-            <button
-              type="button"
-              className="close-button"
-              onClick={() => setShowPreview(false)}
-            >
-              Cerrar y seguir editando
-            </button>
-            <button type="submit" className="submit-button">
-              Todo bien! Subir.
-            </button>
-          </div> */}
+          {!showPreview ? '' : mostrarVistaPrevia(match, setShowPreview)}
+          
         </>
       ) : (
         <>

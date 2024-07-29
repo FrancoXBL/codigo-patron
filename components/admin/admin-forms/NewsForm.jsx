@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import ReactMarkdown from "react-markdown";
 import Login from "./LoginForm";
 import axios from "axios";
 import { API_KEY } from "../../../const/API_KEY";
 import { useNavigate } from "react-router-dom";
+import NewsPreview from "../../previews/NewsPreview";
 
 const ArticleForm = () => {
   const [showPreview, setShowPreview] = useState(false);
@@ -102,6 +102,9 @@ Texto en bloque de Markdown
     date: "2024-11-21",
   });
 
+  function mostrarVistaPrevia(sendNew, setShowPreview){
+    return (<><NewsPreview news={sendNew} close={setShowPreview}/></>)
+  }
   const navigate = useNavigate();
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -125,7 +128,7 @@ Texto en bloque de Markdown
     <>
       {logged ? (
         <>
-        <div className='form-container'>
+        <div className={showPreview ? 'preview-hide' : "form-container"}>
           <form onSubmit={handleSubmit}>
             <div className="form-group">
               <label>Titulo de la noticia:</label>
@@ -172,38 +175,13 @@ Texto en bloque de Markdown
                 onChange={handleChange}
               />
             </div>
+            <button type="button" className="close-button" onClick={() => setShowPreview(true)}>Ver Vista Previa</button>
             <button type="submit" className="submit-button">
               Todo bien! Subir.
             </button>
           </form>
-
         </div>
-          {/* <div className={showPreview ? "preview" : "preview-hide"}>
-            <h2>Preview</h2>
-            <h1>{article.title}</h1>
-            <p>
-              <strong>Tipo de noticia:</strong> {article.type}
-            </p>
-            <img
-              src={article.img}
-              alt={article.title}
-              style={{ width: "100%", height: "auto" }}
-            />
-            <ReactMarkdown>{article.body}</ReactMarkdown>
-            <p>
-              <strong>Fecha:</strong> {article.date}
-            </p>
-            <button
-              type="button"
-              className="close-button"
-              onClick={() => setShowPreview(false)}
-            >
-              Cerrar y seguir editando
-            </button>
-            <button type="submit" className="submit-button">
-              Todo bien! Subir.
-            </button>
-          </div> */}
+        {!showPreview ? '' : mostrarVistaPrevia(article, setShowPreview)}
         </>
       ) : (
         <>
