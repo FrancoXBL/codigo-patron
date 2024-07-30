@@ -8,13 +8,12 @@ export default function AllNewsCard({ title, img, type, id, body }) {
           <img src={img} alt={title} className="all-news-card__image" />
         </div>
         <div>
-          <hr />
+          {/* <hr /> */}
           <h3 className="all-news-card__type">{type}</h3>
           <div className="all-news-card-text">
             <h2 className="all-news-card__title">{title}</h2>
-            <p className="all-news-card__title">{body.slice(0,150)}...</p>
           </div>
-          <hr />
+          {/* <hr /> */}
         </div>
       </div>
     </Link>

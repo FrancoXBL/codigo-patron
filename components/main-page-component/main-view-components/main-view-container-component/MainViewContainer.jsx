@@ -12,6 +12,7 @@ import { BiNews } from "react-icons/bi";
 
 export default function MainViewContainer() {
   const [newNumber, setNewNumber] = useState(1);
+  const [blink, setBlink] = useState("news-card")
   const [news, setNews] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -30,6 +31,13 @@ export default function MainViewContainer() {
 
     fetchNews();
   }, []);
+
+  useEffect(() => {
+    setBlink(`${blink} blink`)
+    setTimeout(() => {
+      setBlink("news-card")
+    }, 300)
+  },[newNumber])
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
@@ -53,8 +61,9 @@ export default function MainViewContainer() {
         </div>
       </div>
       <div className="main-view-container">
-        <div className="last-news-card-container">
+        <div className='last-news-card-container'>
           <LastNewsCard
+            blink={blink}
             type={news[news.length - newNumber].type}
             title={news[news.length - newNumber].title}
             img={news[news.length - newNumber].img}

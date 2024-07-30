@@ -44,8 +44,8 @@
 }
 
 .sm-news-card-container::-webkit-scrollbar {
-  width: 6px; /* Ancho del scrollbar vertical */
-  height: 6px; /* Altura del scrollbar horizontal */
+  width: 10px; /* Ancho del scrollbar vertical */
+  height: 10px; /* Altura del scrollbar horizontal */
 }
 
 .sm-news-card-container::-webkit-scrollbar-track {
@@ -54,7 +54,7 @@
 }
 
 .sm-news-card-container::-webkit-scrollbar-thumb {
-  background: #888; /* Color de la manija del scrollbar */
+  background: var(--color-rojo-oscuro); /* Color de la manija del scrollbar */
   border-radius: 10px;
 }
 

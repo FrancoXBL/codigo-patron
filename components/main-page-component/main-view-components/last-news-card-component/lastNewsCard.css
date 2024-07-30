@@ -7,6 +7,18 @@
   height: 500px;
 }
 
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.blink {
+  animation: fadeInOut .3s ease-in-out infinite;
+}
 .title-arrows{
   width: 75%;
   display: flex;

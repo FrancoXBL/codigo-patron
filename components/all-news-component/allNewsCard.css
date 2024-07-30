@@ -5,25 +5,31 @@
     gap: 1rem;
     margin-top: 2rem;
 }
+
+.all-news-card__title{
+    font-size: 1.8rem;
+}
 .all-news-card{
     display: flex;
     /* background: linear-gradient(90deg, var(--color-gris-oscuro), var(--color-rojo-oscuro)); */
     background: linear-gradient(90deg, var(--color-rojo-oscuro), var(--color-negro));
-    max-height: 200px;
+    max-height: 140px;
     color: white;
     border-radius: 10px;
+    gap: 1rem;
 }
+
 
 .all-news-card-container{
     display: flex;
 }
 
 .all-news-card__image{
-    height: 100%;
+    width: 100%;
 }
 
 .container-all-new-card{
-    max-width: 30%;
+    max-width: 20%;
     overflow: hidden;
 }
 a {
