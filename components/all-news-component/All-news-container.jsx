@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { API_KEY } from "../../const/API_KEY";
 import AllNewsCard from "./All-news-card";
+import LoadingScreen from "../loading-component/LoadingComponent";
 export default function AllNewsContainer() {
   const [newNumber, setNewNumber] = useState(1);
   const [news, setNews] = useState([]);
@@ -25,7 +26,7 @@ export default function AllNewsContainer() {
     fetchNews();
   }, []);
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <LoadingScreen></LoadingScreen>;
   if (error) return <p>Error: {error}</p>;
 
   return (

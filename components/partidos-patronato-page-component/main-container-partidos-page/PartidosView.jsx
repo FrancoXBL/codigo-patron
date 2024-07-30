@@ -3,6 +3,7 @@ import axios from "axios";
 import PartidosPasados from "../card-historial-partidos/PartidosPasados";
 import ProximoPartido from "../container-historial-partidos/HistorialPartidos";
 import { API_KEY } from "../../../const/API_KEY.JS";
+import LoadingScreen from "../../loading-component/LoadingComponent";
 
 export default function PartidosView() {
   const [matches, setMatches] = useState([]);
@@ -24,7 +25,7 @@ export default function PartidosView() {
     fetchMatches();
   }, []);
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <LoadingScreen></LoadingScreen>;
   if (error) return <p>Error: {error}</p>;
   return (
     <div className="partidos-patronato-container">

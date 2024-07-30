@@ -2,6 +2,7 @@ import { horizontalAd } from "../../../test-data/adsTestData";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { API_KEY } from "../../../const/API_KEY.JS";
+import LoadingScreen from "../../loading-component/LoadingComponent";
 
 
 const ProximoPartido = () => {
@@ -24,7 +25,7 @@ const ProximoPartido = () => {
     fetchMatches();
   }, []);
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <LoadingScreen>Loading...</LoadingScreen>;
   if (error) return <p>Error: {error}</p>;
     return (
       <div className="card">

@@ -9,6 +9,7 @@ import { LuArrowLeftSquare, LuArrowRightSquare } from "react-icons/lu";
 import { RiCalendarScheduleLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import { BiNews } from "react-icons/bi";
+import LoadingScreen from "../../../loading-component/LoadingComponent.jsx";
 
 export default function MainViewContainer() {
   const [newNumber, setNewNumber] = useState(1);
@@ -39,7 +40,7 @@ export default function MainViewContainer() {
     }, 300)
   },[newNumber])
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <LoadingScreen></LoadingScreen>;
   if (error) return <p>Error: {error}</p>;
   return (
     <>

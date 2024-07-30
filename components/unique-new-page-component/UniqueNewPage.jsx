@@ -4,6 +4,7 @@ import { CiClock1 } from "react-icons/ci";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { API_KEY } from "../../const/API_KEY";
+import LoadingScreen from "../loading-component/LoadingComponent";
  export default function UniqueNewPage() {
 
     const {id} = useParams()
@@ -27,7 +28,7 @@ import { API_KEY } from "../../const/API_KEY";
       fetchNews();
     }, []);
   
-    if (loading) return <p>Loading...</p>;
+    if (loading) return <LoadingScreen></LoadingScreen>;
     if (error) return <p>Error: {error}</p>;
 
     const idNew = news.find(idNew => idNew._id === id)
