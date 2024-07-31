@@ -129,14 +129,6 @@ export default function MainViewContainer() {
           </Link>
         </div>
       </div>
-      <div className="horizontal-ad-container">
-        <AdHorizontal
-          img={horizontalAd[0].img}
-          body={horizontalAd[0].body}
-          title={horizontalAd[0].title}
-          url={horizontalAd[0].url}
-        />
-      </div>
     </>
   );
 }

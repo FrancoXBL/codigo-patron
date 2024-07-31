@@ -13,7 +13,7 @@ export default function AdCarousel({ ads }) {
   }, [ads.length]);
   
   const visibleAds = [];
-  for (let i = 0; i < 4; i++) {
+  for (let i = 0; i < 5; i++) {
     visibleAds.push(ads[(currentIndex + i) % ads.length]);
   }
 

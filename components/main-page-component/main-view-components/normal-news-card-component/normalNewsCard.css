@@ -28,12 +28,12 @@
   
   .normal-news-card__title {
     margin: 0;
-    font-size: 1em;
+    font-size: .9em;
     color: white;
     background: linear-gradient(180deg, rgba(0, 0, 0), rgb(143, 5, 5));
     /* background-color: black; */
     color: white;
-   ;padding: .5rem;
+   padding: .5rem;
     /* text-decoration: underline; */
     position: absolute;
     width: 100%;

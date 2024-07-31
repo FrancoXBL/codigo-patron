@@ -3,10 +3,12 @@
     margin-top: 1rem;
     height: auto;
     width: full;
-    background-color: var(--color-blanco);
+    background-color: var(--color-gris-oscuro);
 }
 
 .ads-pc-container{
+    border-radius: 10px;
+    overflow: hidden;
     width: 100%;
     height: full;
     background-color: var(--color-rojo-oscuro);

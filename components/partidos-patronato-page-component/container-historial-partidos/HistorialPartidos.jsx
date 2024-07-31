@@ -47,8 +47,6 @@ const ProximoPartido = () => {
           </div>
         </div>
         <hr />
-      <div className="publi-card">
-      </div>
       </div>
     </div>
     );
