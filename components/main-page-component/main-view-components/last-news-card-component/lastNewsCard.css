@@ -50,6 +50,7 @@ cursor: pointer;
 
 
 .news-card__image {
+  user-select: none;
   width: 100%;
   transition: transform 0.3s;
 }

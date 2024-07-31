@@ -5,6 +5,6 @@ function returnApiKey() {
     return "http://localhost:3000";
   } else {
     // return "http://codigopatron.com.ar";
-    return "https://codigo-patron-backend-production.up.railway.app";
+    return "https://codigopatron.com.ar/";
   }
 }
