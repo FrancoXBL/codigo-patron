@@ -35,11 +35,12 @@
     padding: 2.5rem;
 }
 .markdown-style > p >img {
-    max-width: 50%;
+    width: 100%;
 }
 .markdown-style > p {
     font-size: large;
 }
+
 
 @media (max-width: 1240px) {
     .unique-new-page-title{

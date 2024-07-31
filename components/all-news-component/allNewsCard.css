@@ -46,6 +46,13 @@ a {
         padding: .3rem;
         gap: 1rem;
     }
+
+    .all-news-card * h2{
+        font-size: 1rem;
+    }
+    .all-news-card * img {
+        display: none;
+    }
     .all-news-card * p {
         display: none;
     }
