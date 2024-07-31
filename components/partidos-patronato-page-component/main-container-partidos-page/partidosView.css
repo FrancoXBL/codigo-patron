@@ -44,9 +44,8 @@
   .partidos-patronato-container {
     width: 100%;
     display: block;
-    max-height: 500px;
+    max-height: 600px;
     margin-top: 1rem;
-    overflow: auto;
   }
   .partidos-pasados-container {
     margin-top: 1rem;
@@ -54,18 +53,20 @@
     flex-direction: column;
     gap: 0.3rem;
     overflow: auto;
-    min-width: 500px;
-    max-height: 500px;
+    width: 350px;
+    max-height: 200px;
     margin-inline: auto;
   }
   .partido-proximo-container {
-    min-width: 500px;
+    width: 350px;
     background-color: white;
     height: full;
     background-color: var(--gris-oscuro);
     margin-inline: auto;
   }
-
+.goal-details{
+  display: none;
+}
 }
 
 

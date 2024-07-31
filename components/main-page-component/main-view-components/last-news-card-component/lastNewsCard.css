@@ -49,21 +49,6 @@ cursor: pointer;
 }
 
 
-
-@media (max-width: 1240px) {
-  .news-card {
-    display: none;
-  }
-  .title-arrows{
-    display: none;
-  }
-}
-@media (max-width: 720px) {
-  .news-card {
-    display: none;
-  }
-}
-
 .news-card__image {
   width: 100%;
   transition: transform 0.3s;

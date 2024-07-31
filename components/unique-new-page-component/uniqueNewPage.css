@@ -40,3 +40,11 @@
 .markdown-style > p {
     font-size: large;
 }
+
+@media (max-width: 1240px) {
+    .unique-new-page-title{
+        font-size: 2rem;
+        padding-top: 5rem;
+        margin-inline: 2rem;
+    }
+}

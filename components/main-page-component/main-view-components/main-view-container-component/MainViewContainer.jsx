@@ -104,6 +104,17 @@ export default function MainViewContainer() {
             ))}
         </div>
       </div>
+      <div className='last-news-card-container-small'>
+          <LastNewsCard
+            blink={blink}
+            type={news[news.length - newNumber].type}
+            title={news[news.length - newNumber].title}
+            img={news[news.length - newNumber].img}
+            body={news[news.length - newNumber].body}
+            date={news[news.length - newNumber].date}
+            id={news[news.length - newNumber]._id}
+          />
+        </div>
       <div className="link-news-container-small">
         <div className="box-links-container">
           <h2>Todas las noticias</h2>
