@@ -28,6 +28,9 @@
 /* TODAS LAS NOTICIAS CONTAINER Y CARDS */
 @import url('../components/all-news-component/allNewsCard.css');
 
+/* CODIGO STREAM */
+@import url('../components/main-page-component/main-view-components/main-view-container-component/codigoStream.css');
+
 body{
     margin: 0;
     background-color: #333;

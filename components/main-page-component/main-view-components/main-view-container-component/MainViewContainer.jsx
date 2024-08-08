@@ -13,10 +13,14 @@ import LoadingScreen from "../../../loading-component/LoadingComponent.jsx";
 
 export default function MainViewContainer() {
   const [newNumber, setNewNumber] = useState(1);
-  const [blink, setBlink] = useState("news-card")
+  const [blink, setBlink] = useState("news-card");
   const [news, setNews] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
+  const openLink = (url) => {
+    window.open(url, "_blank").focus();
+  };
 
   useEffect(() => {
     const fetchNews = async () => {
@@ -34,11 +38,11 @@ export default function MainViewContainer() {
   }, []);
 
   useEffect(() => {
-    setBlink(`${blink} blink`)
+    setBlink(`${blink} blink`);
     setTimeout(() => {
-      setBlink("news-card")
-    }, 300)
-  },[newNumber])
+      setBlink("news-card");
+    }, 300);
+  }, [newNumber]);
 
   if (loading) return <LoadingScreen></LoadingScreen>;
   if (error) return <p>Error: {error}</p>;
@@ -62,7 +66,7 @@ export default function MainViewContainer() {
         </div>
       </div>
       <div className="main-view-container">
-        <div className='last-news-card-container'>
+        <div className="last-news-card-container">
           <LastNewsCard
             blink={blink}
             type={news[news.length - newNumber].type}
@@ -104,17 +108,17 @@ export default function MainViewContainer() {
             ))}
         </div>
       </div>
-      <div className='last-news-card-container-small'>
-          <LastNewsCard
-            blink={blink}
-            type={news[news.length - newNumber].type}
-            title={news[news.length - newNumber].title}
-            img={news[news.length - newNumber].img}
-            body={news[news.length - newNumber].body}
-            date={news[news.length - newNumber].date}
-            id={news[news.length - newNumber]._id}
-          />
-        </div>
+      <div className="last-news-card-container-small">
+        <LastNewsCard
+          blink={blink}
+          type={news[news.length - newNumber].type}
+          title={news[news.length - newNumber].title}
+          img={news[news.length - newNumber].img}
+          body={news[news.length - newNumber].body}
+          date={news[news.length - newNumber].date}
+          id={news[news.length - newNumber]._id}
+        />
+      </div>
       <div className="link-news-container-small">
         <div className="box-links-container">
           <h2>Todas las noticias</h2>
@@ -129,6 +133,22 @@ export default function MainViewContainer() {
           </Link>
         </div>
       </div>
+
+      <hr />
+      <div className="codigo-stream-container">
+        <h1 className="codgo-stream-title">Recorda vernos en Código Stream!</h1>
+        <div
+          onClick={() => openLink("https://www.youtube.com/@codigopatron2336")}
+          className="codigo-stream-img-container"
+        >
+          <img
+            className="codigo-stream-img"
+            src="https://i.postimg.cc/W3yGdVV5/CPportada.png"
+            alt="Imagen de portada de codigo stream"
+          />
+        </div>
+      </div>
+      <hr />
     </>
   );
 }

@@ -4,6 +4,7 @@ import MainViewContainer from "../components/main-page-component/main-view-compo
 import PartidosView from "../components/partidos-patronato-page-component/main-container-partidos-page/PartidosView";
 import UniqueNewPage from "../components/unique-new-page-component/UniqueNewPage";
 import NotFoundPage from "../components/not-found/NotFound";
+import EditNewsForm from '../components/admin/admin-forms/EditNewsForm'
 import { Route, Routes } from "react-router-dom";
 
 import "./App.css";
@@ -12,6 +13,7 @@ import ArticleForm from "../components/admin/admin-forms/NewsForm";
 import NextMatchForm from "../components/admin/admin-forms/NextMatchForm";
 import Login from "../components/admin/admin-forms/LoginForm";
 import AllNewsContainer from "../components/all-news-component/all-news-container";
+import AdminPanel from "../components/admin/admin-forms/AdminPanel";
 
 function App() {
   return (
@@ -29,6 +31,8 @@ function App() {
           <Route path="/login" element={<Login />}></Route>
           <Route path="/admin/next-match-form" element={<NextMatchForm />}></Route>
           <Route path="/all-news" element={<AllNewsContainer />}></Route>
+          <Route path="/edit-new/:id" element={<EditNewsForm />}></Route>
+          <Route path="/admin-panel" element={<AdminPanel />}></Route>
           <Route path="*" element={<NotFoundPage />}></Route>
         </Routes>
         <FooterContainer />

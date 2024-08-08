@@ -35,6 +35,66 @@
 a {
     text-decoration: none;
 }
+.pagination-controls{
+    justify-content: space-between;
+    width: 200px;
+    margin: auto;
+    display: flex;
+    margin-top: 1rem;
+  }
+  .title-filter{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 15px;
+    background-image: url('../../../dist/CPportada2.png');
+
+  }
+  .pagination-controls > button {
+    border: none;
+    background-color: var(--color-gris-oscuro);
+    border-radius: 15px;
+  }
+
+  .filter-container{
+    max-width: 30%;
+    display: flex;
+    gap: 1rem;
+    margin-block: auto;
+    margin-right: 1rem;
+  }
+  .title-in-filter{
+    margin-block: auto;
+    margin-inline-start: 1rem;
+  }
+
+  .filter-input{
+    border: none;
+    background-color: var(--color-gris-claro);
+    color: black;
+    padding: 1rem;
+    border-radius: 15px;
+    outline: none;
+    width: 70%;
+  }
+  .filter-input:focus{
+    outline: none;
+  }
+
+  .filter-button{
+    border: none;
+    background-color: var(--color-gris-claro);
+    padding: 1rem;
+    border-radius: 100%;
+  }
+
+  .filter-button:hover{
+    cursor: pointer;
+    color: var(--color-rojo-oscuro);
+  }
+
+
 
 @media (max-width: 1240px) {
     .all-news-card{
@@ -76,7 +136,6 @@ a {
     }
 
   }
-
   @media (max-width: 1240px){
       .title-arrows{
         display: flex;

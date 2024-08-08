@@ -1,0 +1,22 @@
+.codigo-stream-container{
+    width: 70%;
+    margin: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: space-between;
+    margin-block: 3rem;
+}
+.codgo-stream-title{
+    color: white;
+    margin: auto;
+}
+.codigo-stream-img-container{
+    width: 100%;
+    cursor: pointer;
+}
+.codigo-stream-img{
+    margin: auto;
+    width: 100%;
+}

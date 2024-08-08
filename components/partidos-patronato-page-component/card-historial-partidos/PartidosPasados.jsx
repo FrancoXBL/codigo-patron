@@ -41,14 +41,14 @@ export default function PartidosPasados({ pastMatch }) {
           <div>
             {pastMatch.homeGoalDetails
               ? pastMatch.homeGoalDetails.map((goal,index) => (
-                    <p key={index}>{`${goal.player} - ${goal.minute}' ${goal.type}`}</p>
+                    <p key={index}>{`${goal.player} - ${goal.minute}' ${goal.type == 'Penal' ? '(P)' : ''}`}</p>
                 ))
               : ""}
           </div>
           <div>
             {pastMatch.awayGoalDetails
               ? pastMatch.awayGoalDetails.map((goal, index) => (
-                    <p key={index}>{`${goal.player} - ${goal.minute}' ${goal.type}`}</p>
+                    <p key={index}>{`${goal.player} - ${goal.minute}' ${goal.type == 'Penal' ? '(P)' : ''}`}</p>
                 ))
               : ""}
           </div>

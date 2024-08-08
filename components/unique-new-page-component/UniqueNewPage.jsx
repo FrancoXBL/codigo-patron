@@ -9,14 +9,14 @@ import LoadingScreen from "../loading-component/LoadingComponent";
 
     const {id} = useParams()
 
-    const [news, setNews] = useState([]);
+    const [idNew, setNews] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
   
     useEffect(() => {
       const fetchNews = async () => {
         try {
-          const response = await axios.get(`${API_KEY}/api/news`);
+          const response = await axios.get(`${API_KEY}/api/news/${id}`);
           setNews(response.data);
           setLoading(false);
         } catch (err) {
@@ -30,8 +30,6 @@ import LoadingScreen from "../loading-component/LoadingComponent";
   
     if (loading) return <LoadingScreen></LoadingScreen>;
     if (error) return <p>Error: {error}</p>;
-
-    const idNew = news.find(idNew => idNew._id === id)
 
     return (
         <div className="unique-new-page">

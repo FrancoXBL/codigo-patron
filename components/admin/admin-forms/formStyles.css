@@ -43,7 +43,7 @@ form {
   cursor: pointer;
 }
 
-.close-button{
+.close-button {
   padding: 10px 15px;
   background-color: var(--color-rojo-oscuro);
   color: white;
@@ -117,4 +117,43 @@ form {
 }
 .preview-hide {
   display: none;
+}
+
+.admin-panel-links > a {
+  display: block;
+  color: white;
+  margin-top: 1rem;
+  padding: 15px;
+  background-color: var(--color-rojo-oscuro);
+  border-radius: 15px;
+}
+
+.admin-panel-links > a:hover {
+  background: linear-gradient(
+    270deg,
+    var(--color-rojo-oscuro),
+    var(--color-negro)
+  );
+}
+
+.admin-panel-links > .cards {
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  margin-top: 1rem;
+  background-color: var(--color-rojo-oscuro);
+  border-radius: 15px;
+  padding: 10px;
+}
+.admin-panel-links > .cards > .links > a {
+  margin: auto;
+  padding: 20px;
+  width: 40px;
+  color: white;
+}
+
+.admin-panel-links > .cards > .links {
+  display: flex;
+  gap: 2rem;
+  max-width: 50%;
 }
