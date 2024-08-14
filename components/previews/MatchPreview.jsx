@@ -41,6 +41,7 @@ export default function MatchPreview({ match, close }){
                 </li>
               ))}
             </ul>
+            <a href={match.resume}>Resumen</a>
             <button
               type="button"
               className="close-button"

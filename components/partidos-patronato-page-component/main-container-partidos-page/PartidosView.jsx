@@ -16,6 +16,9 @@ export default function PartidosView() {
         const responseMatches = await axios.get(`${API_KEY}/api/matches`);
         setMatches(responseMatches.data);
         setLoading(false);
+
+        document.title = "Codigo Patron / Partidos";
+
       } catch (err) {
         setError(err.message);
         setLoading(false);

@@ -39,7 +39,7 @@
 .sm-news-card-container {
   padding-block: 1rem;
   margin-block: 2rem;
-  max-height: 300px;
+  max-height: 250px;
   display: flex;
   gap: .5rem;
   background-color: var(--color-gris-oscuro);

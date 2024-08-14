@@ -23,6 +23,7 @@
   }
   
   .card-body {
+    position: relative;
     background-color: white;
     padding: 20px;
     background-image: url('../../../dist/CPportada2.png');
@@ -109,4 +110,21 @@
   }
   .goal-details > div > p {
     display: block;
+  }
+
+  .resume-button{
+    top: 20px;
+    right: 20px;
+    position: absolute;
+    color: red;
+    font-weight: bold;
+    padding: 1rem;
+    border-radius: 15px;
+    color: white;
+    background-color: var(--color-rojo-oscuro);
+  }
+
+  .resume-button:hover{
+    color: red;
+    background-color: var(--color-blanco);
   }

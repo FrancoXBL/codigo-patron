@@ -36,8 +36,8 @@
 }
 
 .partido-proximo-container {
-  background-image: url('../../../dist/CPportada2.png');
-  background-color: white;
+  /* background-image: url('../../../dist/CPportada2.png'); */
+  background-color: var(--color-gris-oscuro);
   width: 50%;
   height: full;
 }

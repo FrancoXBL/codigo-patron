@@ -25,6 +25,8 @@ export default function AllNewsContainer() {
       });
       setNews(response.data);
 
+      document.title = "Codigo Patron / Noticias";
+
       // Si la cantidad de noticias devueltas es menor a 10, estamos en la última página
       setIsLastPage(response.data.length < 10);
       setLoading(false);

@@ -54,6 +54,7 @@ export default function PartidosPasados({ pastMatch }) {
           </div>
         </div>
         <p className="text-muted">Árbitro: {pastMatch.referee}</p>
+        <a href={pastMatch.resume} className="resume-button" target="_blank">Ver Resumen</a>
       </div>
     </div>
   );

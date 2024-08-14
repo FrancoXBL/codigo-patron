@@ -12,7 +12,7 @@ import { BiNews } from "react-icons/bi";
 import LoadingScreen from "../../../loading-component/LoadingComponent.jsx";
 
 export default function MainViewContainer() {
-  const [newNumber, setNewNumber] = useState(1);
+  const [newNumber, setNewNumber] = useState();
   const [blink, setBlink] = useState("news-card");
   const [news, setNews] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -28,6 +28,11 @@ export default function MainViewContainer() {
         const response = await axios.get(`${API_KEY}/api/news`);
         setNews(response.data);
         setLoading(false);
+        setNewNumber(response.data.length)
+
+        document.title = "Codigo Patron";
+
+
       } catch (err) {
         setError(err.message);
         setLoading(false);
@@ -54,13 +59,13 @@ export default function MainViewContainer() {
           <LuArrowLeftSquare
             className="arrow"
             onClick={() =>
-              setNewNumber(newNumber != 1 ? newNumber - 1 : newNumber)
+              setNewNumber(news.length != newNumber ? newNumber + 1 : newNumber)
             }
           />
           <LuArrowRightSquare
             className="arrow"
             onClick={() =>
-              setNewNumber(news.length != newNumber ? newNumber + 1 : newNumber)
+              setNewNumber(news.length - 5 != newNumber ? newNumber - 1 : newNumber)
             }
           />
         </div>
@@ -94,8 +99,6 @@ export default function MainViewContainer() {
         <h2 className="title-another-news">Puede interesarte</h2>
         <div className="sm-news-card-container">
           {news
-            .slice()
-            .reverse()
             .map((news, index) => (
               <div className="normal-news-card-container" key={index}>
                 <NormalNewsCard

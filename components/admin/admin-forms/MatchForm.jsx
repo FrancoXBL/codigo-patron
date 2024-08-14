@@ -23,6 +23,7 @@ const MatchForm = () => {
     homeGoalDetails: [],
     awayGoalDetails: [],
     referee: "Referee",
+    resume: "Resumen"
   });
 
 
@@ -108,15 +109,25 @@ function mostrarVistaPrevia(sendMatch, setShowPreview){
               </div>
               <div className="form-group">
                 <label>Goles de Patronato:</label>
-                <input
-                  type="number"
+                <select
                   name="homeScore"
                   value={match.homeScore}
                   onChange={(e) => handleScoreChange(e, "home")}
-                />
+                >
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                </select>
               </div>
               <div>
-                <h3>Home Team Goals</h3>
+                <h3>Informacion goles patronato</h3>
                 {match.homeGoalDetails?.map((goal, index) => (
                   <div key={index} className="goal-details">
                     <label>Jugador:</label>
@@ -145,15 +156,25 @@ function mostrarVistaPrevia(sendMatch, setShowPreview){
               </div>
               <div className="form-group">
                 <label>Equipo Rival:</label>
-                <input
-                  type="number"
+                <select
                   name="awayScore"
-                  value={match.awayScore}
+                  value={match.awayScoreScore}
                   onChange={(e) => handleScoreChange(e, "away")}
-                />
+                >
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                </select>
               </div>
               <div>
-                <h3>Away Team Goals</h3>
+                <h3>Goles del rival</h3>
                 {match.awayGoalDetails?.map((goal, index) => (
                   <div key={index} className="goal-details">
                     <label>Jugador:</label>
@@ -249,6 +270,15 @@ function mostrarVistaPrevia(sendMatch, setShowPreview){
                   type="text"
                   name="referee"
                   value={match.referee}
+                  onChange={handleChange}
+                />
+              </div>
+              <div className="form-group">
+                <label>Resumen:</label>
+                <input
+                  type="text"
+                  name="resume"
+                  value={match.resume}
                   onChange={handleChange}
                 />
               </div>
