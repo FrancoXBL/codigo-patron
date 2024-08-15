@@ -1,0 +1,14 @@
+.footer-container{
+    width: 100vw;
+    height: auto;
+    background-color: var(--color-negro);
+    position: absolute;
+    right: 0px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-text{
+    color: var(--color-gris-claro);
+    padding: 30px;
+}

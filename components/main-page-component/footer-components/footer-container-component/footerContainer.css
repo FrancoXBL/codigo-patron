@@ -1,9 +1,7 @@
-.footer-container{
-    border-radius: .5rem;
-    margin-top: 1rem;
+.footer-ads-container{
     height: auto;
-    width: full;
-    background-color: var(--color-gris-oscuro);
+    width: 100%;
+    margin-bottom: 1rem;
 }
 
 .ads-pc-container{

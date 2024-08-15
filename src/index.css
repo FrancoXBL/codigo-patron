@@ -31,6 +31,8 @@
 /* CODIGO STREAM */
 @import url('../components/main-page-component/main-view-components/main-view-container-component/codigoStream.css');
 
+/* FOOTER CSS */
+@import url('../components/footer-component/footerComponent.css');
 body{
     margin: 0;
     background-color: #333;

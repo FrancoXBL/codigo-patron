@@ -14,6 +14,7 @@ import NextMatchForm from "../components/admin/admin-forms/NextMatchForm";
 import Login from "../components/admin/admin-forms/LoginForm";
 import AllNewsContainer from "../components/all-news-component/all-news-container";
 import AdminPanel from "../components/admin/admin-forms/AdminPanel";
+import FooterComponent from "../components/footer-component/FooterComponent";
 
 function App() {
   return (
@@ -35,7 +36,7 @@ function App() {
           <Route path="/admin-panel" element={<AdminPanel />}></Route>
           <Route path="*" element={<NotFoundPage />}></Route>
         </Routes>
-        <FooterContainer />
+        <FooterComponent />
       </div>
     </>
   );

@@ -3,7 +3,7 @@ import AdCarousel from "../ads-carrousel/AdsCarrousel.jsx";
 import AdCarouselMobile from "../ads-carrousel/AdsCarrouselMobile.jsx";
 export default function FooterContainer() {
   return (
-    <div className="footer-container">
+    <div className="">
       <div className="ads-pc-container">
           <AdCarousel ads={footerAds}
           />
