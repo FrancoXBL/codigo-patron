@@ -12,3 +12,8 @@
     color: var(--color-gris-claro);
     padding: 30px;
 }
+.footer-logo-qr{
+    color: var(--color-gris-claro);
+    text-align: center;
+    font-size: bold;
+}
