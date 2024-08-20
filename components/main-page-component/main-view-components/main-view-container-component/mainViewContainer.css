@@ -37,13 +37,13 @@
 
 
 .sm-news-card-container {
+  justify-content: space-around;
   padding-block: 1rem;
   margin-block: 2rem;
   max-height: 250px;
   display: flex;
-  gap: .5rem;
+  gap: 1rem;
   background-color: var(--color-gris-oscuro);
-  overflow-x: scroll;
 }
 
 .sm-news-card-container::-webkit-scrollbar {
@@ -91,9 +91,6 @@
   display: none;
 }
 
-.normal-news-card-container{
-  min-width: 300px;
-}
 
 @media (max-width: 1240px) {
   
@@ -117,4 +114,27 @@
     justify-content: space-between;
   }
 
+}
+
+.see-more{
+  color: white;
+  width: 300px;
+  text-align: center;
+  margin: auto;
+  justify-content: center;
+  border-radius: 15px;
+}
+
+.see-more > h1 {
+  padding: .5rem;
+  align-items: center;
+  background-color: var(--color-rojo-oscuro);
+  color: var(--color-gris-claro);
+  border-radius: 15px;
+}
+
+.see-more > h1:hover{
+  background-color: var(--color-gris-claro);
+  color: var(--color-rojo-oscuro);
+  border-radius: 15px;
 }

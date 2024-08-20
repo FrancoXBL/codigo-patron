@@ -28,11 +28,9 @@ export default function MainViewContainer() {
         const response = await axios.get(`${API_KEY}/api/news`);
         setNews(response.data);
         setLoading(false);
-        setNewNumber(response.data.length)
+        setNewNumber(response.data.length);
 
         document.title = "Codigo Patron";
-
-
       } catch (err) {
         setError(err.message);
         setLoading(false);
@@ -65,7 +63,9 @@ export default function MainViewContainer() {
           <LuArrowRightSquare
             className="arrow"
             onClick={() =>
-              setNewNumber(news.length - 5 != newNumber ? newNumber - 1 : newNumber)
+              setNewNumber(
+                news.length - 5 != newNumber ? newNumber - 1 : newNumber
+              )
             }
           />
         </div>
@@ -98,18 +98,22 @@ export default function MainViewContainer() {
         </div>
         <h2 className="title-another-news">Puede interesarte</h2>
         <div className="sm-news-card-container">
-          {news
-            .map((news, index) => (
-              <div className="normal-news-card-container" key={index}>
-                <NormalNewsCard
-                  title={news.title}
-                  img={news.img}
-                  type={news.type}
-                  id={news._id}
-                />
-              </div>
-            ))}
+          {news.slice(6, 10).map((news, index) => (
+            <div className="normal-news-card-container" key={index}>
+              <NormalNewsCard
+                title={news.title}
+                img={news.img}
+                type={news.type}
+                id={news._id}
+              />
+            </div>
+          ))}
         </div>
+        <Link to={'/all-news'}>
+        <div className="see-more">
+          <h1>Ver mas noticias...</h1>
+        </div>
+        </Link>
       </div>
       <div className="last-news-card-container-small">
         <LastNewsCard

@@ -8,7 +8,7 @@ export default function FooterComponent() {
     </div>
       <div className="footer-container">
         <div className="footer-logo-qr">
-          <p>Unirse a la comunidad de whatsapp</p>
+          <p>Unirse a la comunidad de whatsapp.</p>
           <QRCode
             value="https://chat.whatsapp.com/CVPHnvKdvrq73SsSCTNn0n"
             size={300}

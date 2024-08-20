@@ -1,10 +1,11 @@
 .normal-news-card {
     overflow: hidden;
     transition: box-shadow 0.3s;
-    /* border-radius: 5px; */
+    border-radius: 15px;
     height: 100%;
-    max-width: 300px;
+    max-width: 290px;
     position: relative;
+
   }
   
   .title-another-news{
@@ -15,7 +16,6 @@
   
   .normal-news-card__image {
     width: 100%;
-    height: 100%;
     transition: transform 0.3s;
   }
   .normal-news-card:hover{
@@ -30,7 +30,7 @@
     margin: 0;
     font-size: .9em;
     color: white;
-    background: linear-gradient(180deg, rgba(0, 0, 0), rgb(143, 5, 5));
+    background: var(--color-rojo-oscuro);
     /* background-color: black; */
     color: white;
    padding: .5rem;
