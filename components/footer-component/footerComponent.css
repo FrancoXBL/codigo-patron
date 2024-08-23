@@ -11,9 +11,21 @@
 .footer-text{
     color: var(--color-gris-claro);
     padding: 30px;
+    text-align: end;
 }
 .footer-logo-qr{
     color: var(--color-gris-claro);
     text-align: center;
     font-size: bold;
+}
+
+@media (max-width: 1240px) {
+    .footer-text {
+        color: var(--color-gris-claro);
+        text-align: end;
+    }
+    .footer-logo-qr > canvas{
+        max-width: 200px;
+        max-height: 200px;
+    }
 }
