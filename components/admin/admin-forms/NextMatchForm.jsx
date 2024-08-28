@@ -36,8 +36,7 @@ const NextMatchForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      console.log(match)
-      // await axios.post(`${API_KEY}/api/next-match`, match);
+      await axios.post(`${API_KEY}/api/next-match`, match);
       navigate("/partidos-patronato");
     } catch (error) {
       console.log(error);
@@ -46,7 +45,7 @@ const NextMatchForm = () => {
 
   return (
     <>
-      {!logged ? (
+      {logged ? (
         <>
           <div className={showPreview ? 'preview-hide' : "form-container"}>
             <form onSubmit={handleSubmit}>
